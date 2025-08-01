@@ -1,3 +1,4 @@
+// 📁 backend/server.js
 const express = require("express");
 const session = require("express-session");
 const path = require("path");
@@ -11,33 +12,41 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: false, // يجب أن يكون true فقط إذا كان HTTPS
-    maxAge: 1000 * 60 * 60 // صلاحية الجلسة ساعة
+    secure: false,
+    maxAge: 1000 * 60 * 60 // ساعة
   }
 }));
 
-// ✅ معالجة بيانات النماذج
+// ✅ قراءة بيانات النماذج
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // ✅ تقديم ملفات static
-app.use(express.static(path.join(__dirname, "public"))); // login.html
-app.use("/frontend", express.static(path.join(__dirname, "../frontend"))); // الصور و HTML
+app.use(express.static(path.join(__dirname, "public")));
+app.use("/frontend", express.static(path.join(__dirname, "../frontend")));
 
-// ✅ صفحة login.html
+// ✅ صفحة تسجيل الدخول
 app.get("/login.html", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "login.html"));
 });
 
-// ✅ تسجيل الدخول
+// ✅ معالجة تسجيل الدخول
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
-
   if (username === "admin" && password === "1234") {
     req.session.loggedIn = true;
     res.redirect("/views/dashboard.html");
   } else {
     res.send("⚠️ اسم المستخدم أو كلمة المرور غير صحيحة.<br><a href='/login.html'>🔙 العودة</a>");
+  }
+});
+
+// ✅ تأكيد الجلسة
+app.get("/check-session", (req, res) => {
+  if (req.session.loggedIn) {
+    res.sendStatus(200);
+  } else {
+    res.sendStatus(401);
   }
 });
 
@@ -48,16 +57,7 @@ app.get("/logout", (req, res) => {
   });
 });
 
-// ✅ التحقق من الجلسة
-app.get("/check-session", (req, res) => {
-  if (req.session.loggedIn) {
-    res.sendStatus(200);
-  } else {
-    res.sendStatus(401);
-  }
-});
-
-// ✅ تقديم صفحات views فقط للأعضاء
+// ✅ تقديم صفحات views للأعضاء فقط
 app.get("/views/:page", (req, res) => {
   if (req.session.loggedIn) {
     const filePath = path.join(__dirname, "views", req.params.page);
@@ -67,7 +67,7 @@ app.get("/views/:page", (req, res) => {
   }
 });
 
-// ✅ حماية مجلد /protected بالكامل
+// ✅ حماية ملفات /protected
 app.use("/protected", (req, res, next) => {
   if (req.session.loggedIn) {
     next();
@@ -75,9 +75,9 @@ app.use("/protected", (req, res, next) => {
     res.status(403).send("🛑 ممنوع الوصول، يجب تسجيل الدخول.");
   }
 });
-app.use("/protected", express.static(path.join(__dirname, "protected"))); // مثل الكتب
+app.use("/protected", express.static(path.join(__dirname, "protected")));
 
-// ✅ تشغيل الخادم
+// ✅ بدء الخادم
 app.listen(PORT, () => {
   console.log(`✅ Backend running on http://localhost:${PORT}`);
 });
