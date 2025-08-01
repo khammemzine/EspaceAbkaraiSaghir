@@ -26,11 +26,13 @@
       text-align: center;
       max-width: 500px;
       width: 100%;
+      animation: fadeIn 0.6s ease-in-out;
     }
 
     h2 {
       color: #2e7d32;
       margin-bottom: 1.5rem;
+      font-weight: bold;
     }
 
     a.button {
@@ -57,17 +59,34 @@
       padding: 10px 20px;
       border-radius: 8px;
       font-weight: bold;
+      transition: background-color 0.3s;
     }
 
     button.logout:hover {
       background-color: #b71c1c;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 576px) {
+      .box {
+        padding: 1.5rem;
+      }
+
+      a.button, button.logout {
+        font-size: 0.95rem;
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="box">
-    <h2>مرحبًا بك في منطقة الأعضاء 🎉</h2>
+    <h2>🎉 مرحبًا بك في منطقة الأعضاء</h2>
     <a href="library.html" class="button">📚 الدخول إلى المكتبة</a>
     <a href="activities.html" class="button">🧩 الألعاب والأنشطة</a>
     <a href="experiments.html" class="button">🧪 التجارب العلمية</a>
@@ -75,14 +94,14 @@
   </div>
 
   <script>
-    // حماية الصفحة: إذا لم يكن المستخدم مسجل الدخول → إعادة التوجيه
+    // ✅ التحقق من تسجيل الدخول
     if (localStorage.getItem("loggedIn") !== "true") {
-      window.location.href = "/login.html";
+      window.location.replace("/login.html");
     }
 
     function logout() {
       localStorage.removeItem("loggedIn");
-      window.location.href = "/index.html";
+      window.location.replace("/index.html");
     }
   </script>
 
