@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>📚 مكتبتي الصغيرة | منطقة الأعضاء</title>
+  <title>📚 مكتبتي | منطقة الأعضاء</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
@@ -24,24 +24,12 @@
       text-align: center;
     }
 
-    .intro-box h2 {
-      font-size: 1.8rem;
-      color: #0d47a1;
-      margin-bottom: 1rem;
-    }
-
-    .intro-box p {
-      font-size: 1rem;
-      color: #444;
-    }
-
     .book-card {
       background-color: #fff;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 1rem;
       text-align: center;
-      height: 100%;
       transition: transform 0.3s;
     }
 
@@ -69,39 +57,14 @@
       color: #888;
       font-size: 0.9rem;
     }
-
-    @media (max-width: 576px) {
-      .intro-box h2 {
-        font-size: 1.4rem;
-      }
-
-      .intro-box p {
-        font-size: 0.95rem;
-      }
-
-      .book-title {
-        font-size: 0.95rem;
-      }
-
-      .book-card img {
-        height: 150px;
-      }
-
-      body {
-        padding-top: 100px;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- ✅ شريط التنقل -->
+  <!-- ✅ شريط علوي -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="/views/dashboard.html">📚 مكتبتي</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
     </div>
   </nav>
 
@@ -109,7 +72,7 @@
   <div class="container-fluid">
     <div class="intro-box">
       <h2>📘 مكتبة الأعضاء</h2>
-      <p>اقرأ واستمتع وتعلّم مع كتب ممتعة وشيقة ❤️</p>
+      <p>🧠 اقرأ، تعلم، واستمتع بالكتب التعليمية الممتعة للأطفال!</p>
     </div>
 
     <!-- ✅ قائمة الكتب -->
@@ -131,15 +94,7 @@
         </div>
       </div>
 
-      <div class="col">
-        <div class="book-card">
-          <img src="/frontend/img/activite3.PNG" alt="الكهرباء والمغنطيسية" />
-          <div class="book-title">الكهرباء والمغنطيسية</div>
-          <a href="/protected/books/activité3.pdf" class="btn btn-outline-primary btn-sm mt-2" target="_blank">📖 اقرأ الآن</a>
-        </div>
-      </div>
-
-      <!-- ➕ أضف المزيد بنفس الطريقة -->
+      <!-- ➕ أضف المزيد من الكتب بنفس الطريقة -->
 
     </div>
   </div>
