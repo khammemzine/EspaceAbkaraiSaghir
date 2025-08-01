@@ -1,18 +1,16 @@
 {
-  "name": "espaceabkaraisaghir-backend",
+  "name": "espace-abkarai-backend",
   "version": "1.0.0",
-  "description": "Backend sécurisé pour le site éducatif Espace Abkarai Saghir",
+  "description": "Backend for Espace Abkarai Saghir with session-based protection",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
+  "keywords": [],
+  "author": "Abkarai Team",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
     "express-session": "^1.17.3"
-  },
-  "engines": {
-    "node": ">=16"
-  },
-  "author": "khammemzine",
-  "license": "MIT"
+  }
 }
