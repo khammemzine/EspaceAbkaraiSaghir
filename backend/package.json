@@ -1,5 +1,5 @@
 {
-  "name": "espace-abkarai-backend",
+  "name": "espaceabkaraisaghir-backend",
   "version": "1.0.0",
   "description": "Backend for Espace Abkarai Saghir (protected member area)",
   "main": "server.js",
@@ -19,3 +19,4 @@
     "express-session": "^1.17.3"
   }
 }
+
