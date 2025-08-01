@@ -7,9 +7,10 @@
       localStorage.setItem("loggedIn", "true");
 
       // توجيه إلى صفحة الأعضاء (يفضل بدون / في البداية على GitHub Pages)
-      window.location.href = "dashboard.html"; // أو "views/dashboard.html" حسب مكان الملف
+      window.location.href = "views/dashboard.html"; // أو "views/dashboard.html" حسب مكان الملف
     } else {
       document.getElementById("msg").innerText = "⚠️ اسم المستخدم أو كلمة المرور غير صحيحة.";
     }
   }
 </script>
+
