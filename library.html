@@ -261,24 +261,23 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- ✅ سكريبت الحماية -->
-  <script>
-  function login() {
-    const username = document.getElementById("username").value.trim();
-    const password = document.getElementById("password").value;
-
-    if (username === "admin" && password === "1234") {
-      localStorage.setItem("loggedIn", "true");
-
-      // توجيه إلى صفحة الأعضاء (يفضل بدون / في البداية على GitHub Pages)
-      window.location.href = "dashboard.html"; // أو "views/dashboard.html" حسب مكان الملف
-    } else {
-      document.getElementById("msg").innerText = "⚠️ اسم المستخدم أو كلمة المرور غير صحيحة.";
-    }
-  }
+ <!-- ✅ سكريبت الحماية -->
+<script>
+  document.querySelectorAll(".protected-link").forEach(link => {
+    link.addEventListener("click", function(e) {
+      if (localStorage.getItem("loggedIn") !== "true") {
+        e.preventDefault();
+        alert("🔐 هذا الكتاب مخصص للأعضاء فقط.\nيرجى تسجيل الدخول أولاً.");
+        window.location.href = "login.html";
+      }
+    });
+  });
 </script>
+
 
 
 </body>
 </html>
+
 
 
