@@ -45,7 +45,8 @@
       font-weight: bold;
     }
 
-    .btn-experiment {
+    .btn-experiment,
+    .protected-link {
       background-color: #00796b;
       color: white;
       border-radius: 8px;
@@ -55,7 +56,8 @@
       margin-top: 10px;
     }
 
-    .btn-experiment:hover {
+    .btn-experiment:hover,
+    .protected-link:hover {
       background-color: #004d40;
     }
 
@@ -91,24 +93,24 @@
   <div class="container">
     <div class="row justify-content-center g-4">
       
-      <!-- تجربة 1 -->
+      <!-- تجربة 1: البالون -->
       <div class="col-12 col-sm-6 col-md-4">
         <div class="card p-3 h-100">
           <img src="images/balloon.png" alt="تجربة البالون" class="img-fluid">
           <div class="card-body">
             <h5 class="card-title">🎈 نفخ البالون بالخل والصودا</h5>
-            <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/experiments/balloon.html">🎈 تجربة البالون</a>
+            <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/experiments/balloon.html" class="protected-link">🎈 جرب الآن</a>
           </div>
         </div>
       </div>
 
-      <!-- تجربة 2 -->
+      <!-- تجربة 2: البركان -->
       <div class="col-12 col-sm-6 col-md-4">
         <div class="card p-3 h-100">
           <img src="images/volcano.png" alt="تجربة البركان" class="img-fluid">
           <div class="card-body">
             <h5 class="card-title">🌋 تجربة البركان المنزلي</h5>
-            <a href=""https://espaceabkaraisaghir-backend.onrender.com/protected/experiments/volcano.html">جرب الآن</a>
+            <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/experiments/volcano.html" class="protected-link">🌋 جرب الآن</a>
           </div>
         </div>
       </div>
@@ -128,7 +130,7 @@
         if (localStorage.getItem("loggedIn") !== "true") {
           e.preventDefault();
           alert("🔐 هذه التجربة مخصصة للأعضاء فقط.\nيرجى تسجيل الدخول أولاً.");
-          window.location.href = "/login.html";
+          window.location.href = "login.html";
         }
       });
     });
@@ -136,5 +138,3 @@
 
 </body>
 </html>
-
-
