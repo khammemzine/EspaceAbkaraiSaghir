@@ -1,0 +1,23 @@
+name: Deploy Frontend to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy subfolder to gh-pages
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: frontend
+          KEEP_FILES: false
