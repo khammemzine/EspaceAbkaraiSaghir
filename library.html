@@ -97,7 +97,6 @@
       to {opacity: 1; transform: translateY(0);}
     }
 
-    /* تحسينات للجوال */
     @media (max-width: 576px) {
       .intro-box h2 {
         font-size: 1.4rem;
@@ -130,143 +129,149 @@
 </head>
 <body>
 
-  <!-- ✅ شريط التنقل العلوي -->
+  <!-- ✅ شريط التنقل -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">📚 مكتبتي الصغيرة</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="فتح القائمة">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">🏠 الصفحة الرئيسية</a>
+            <a class="nav-link active" href="index.html">🏠 الصفحة الرئيسية</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#books">📖 الكتب</a>
-          </li>
-  
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ✅ المحتوى -->
+  <!-- ✅ المقدمة -->
   <div class="container-fluid">
     <div class="intro-box">
       <h2>📚 مكتبتي الصغيرة</h2>
       <p>انضم إلى محمد ياسين في رحلة ممتعة داخل عالم الكتب والقصص!<br>اكتشف، استمتع، وتعلم من خلال صفحات مميزة ومختارة بعناية ❤️</p>
     </div>
 
+    <!-- ✅ قائمة الكتب -->
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="books">
-      <!-- بطاقات الكتب -->
+      <!-- كرر هذا القسم لكل كتاب -->
       <div class="col">
         <div class="book-card">
           <img src="img/activite1.PNG" alt="الصوت و الضوء">
           <div class="book-title">الصوت و الضوء</div>
-          <a href="books/activité1.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/activité1.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
+        </div>
+      </div>
+
+      <!-- ✨ نسخ لبقية الكتب -->
+      <div class="col">
+        <div class="book-card">
+          <img src="img/activite2.PNG" alt="القوى و الحركة">
+          <div class="book-title">القوى و الحركة</div>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/activité2.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
       </div>
 
       <div class="col">
         <div class="book-card">
-          <img src="img/activite2.PNG" alt="القوى و الحركة">
-          <div class="book-title">القوى و الحركة</div>
-          <a href="books/activité2.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
-        </div>
-      </div>
-	  
-	  <div class="col">
-        <div class="book-card">
           <img src="img/activite3.PNG" alt="الكهرباء و المغنطيسية">
           <div class="book-title">الكهرباء و المغنطيسية</div>
-          <a href="books/activité3.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/activité3.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
       </div>
-	  
-	  <div class="col">
+
+      <div class="col">
         <div class="book-card">
           <img src="img/activite4.PNG" alt="المادة و المواد">
           <div class="book-title">المادة و المواد</div>
-          <a href="books/activité4.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/activité4.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
       </div>
-	  
-	  <div class="col">
+
+      <div class="col">
         <div class="book-card">
           <img src="img/experience1.PNG" alt="المكنات">
           <div class="book-title">المكنات</div>
-          <a href="books/experience1.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/experience1.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
       </div>
-	  
-	  <div class="col">
+
+      <div class="col">
         <div class="book-card">
           <img src="img/experience2.PNG" alt="الهواء">
           <div class="book-title">الهواء</div>
-          <a href="books/experience2.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/experience2.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
       </div>
-	  
-	  <div class="col">
+
+      <div class="col">
         <div class="book-card">
           <img src="img/experience3.PNG" alt="الأرقام و الأعداد">
           <div class="book-title">الأرقام و الأعداد</div>
-          <a href="books/experience3.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/experience3.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
       </div>
-	  
-	  <div class="col">
+
+      <div class="col">
         <div class="book-card">
           <img src="img/histoire1.PNG" alt="حكايات علمية 1">
           <div class="book-title">حكايات علمية 1</div>
-          <a href="books/histoire1.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/histoire1.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
       </div>
-	  
-	  <div class="col">
+
+      <div class="col">
         <div class="book-card">
           <img src="img/histoire3.PNG" alt="حكايات علمية 3">
           <div class="book-title">حكايات علمية 3</div>
-          <a href="books/histoire3.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/histoire3.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
       </div>
-	  
-	   <div class="col">
+
+      <div class="col">
         <div class="book-card">
           <img src="img/histoire4.PNG" alt="حكايات علمية 4">
           <div class="book-title">حكايات علمية 4</div>
-          <a href="books/histoire4.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/histoire4.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
       </div>
-	  
-	  <div class="col">
+
+      <div class="col">
         <div class="book-card">
           <img src="img/ocean.PNG" alt="المحيطات">
           <div class="book-title">المحيطات</div>
-          <a href="books/ocean.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/ocean.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
       </div>
-	  
-	   <div class="col">
+
+      <div class="col">
         <div class="book-card">
           <img src="img/univers.PNG" alt="الفضاء">
           <div class="book-title">الفضاء</div>
-          <a href="books/univers.pdf" class="btn btn-sm btn-outline-primary mt-2" target="_blank">📖 اقرأ الآن</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/books/univers.pdf" class="btn btn-sm btn-outline-primary mt-2 protected-link" target="_blank">📖 اقرأ الآن</a>
         </div>
-
-         
-      <!-- أضف المزيد من الكتب هنا بنفس الشكل -->
+      </div>
     </div>
-
-    <!-- زر الرجوع -->
-    
   </div>
 
-  <footer id="contact">&copy; 2025 فضاء العبقري الصغير - مكتبتي الصغيرة</footer>
+  <footer>&copy; 2025 فضاء العبقري الصغير - مكتبتي الصغيرة</footer>
 
   <!-- ✅ سكريبت Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ سكريبت الحماية -->
+  <script>
+    document.querySelectorAll(".protected-link").forEach(link => {
+      link.addEventListener("click", function(e) {
+        if (localStorage.getItem("loggedIn") !== "true") {
+          e.preventDefault();
+          alert("🔐 هذا الكتاب مخصص للأعضاء فقط.\nيرجى تسجيل الدخول أولاً.");
+          window.location.href = "/login.html";
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
