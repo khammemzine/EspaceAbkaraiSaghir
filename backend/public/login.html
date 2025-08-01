@@ -70,7 +70,7 @@
       // تحقق محلي (يمكن تغييره لربط backend)
       if (username === "admin" && password === "1234") {
         localStorage.setItem("loggedIn", "true");
-        window.location.href = "dashboard.html"; // يمكنك تغييره لاحقًا
+        window.location.href = "views/dashboard.html"; // يمكنك تغييره لاحقًا
       } else {
         document.getElementById("msg").innerText = "⚠️ اسم المستخدم أو كلمة المرور غير صحيحة.";
       }
@@ -79,3 +79,4 @@
 
 </body>
 </html>
+
