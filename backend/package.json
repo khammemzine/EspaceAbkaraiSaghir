@@ -1,13 +1,21 @@
 {
-  "name": "espace-backend",
+  "name": "espace-abkarai-backend",
   "version": "1.0.0",
+  "description": "Backend for Espace Abkarai Saghir (protected member area)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
+  "keywords": [
+    "express",
+    "backend",
+    "education",
+    "abkarai"
+  ],
+  "author": "YourName",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "path": "^0.12.7"
+    "express-session": "^1.17.3"
   }
 }
