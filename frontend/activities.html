@@ -45,6 +45,12 @@
       font-weight: bold;
       display: inline-block;
       margin-top: 8px;
+      background-color: #c8e6c9;
+      padding: 6px 16px;
+      border-radius: 6px;
+    }
+    a.activity-link:hover {
+      background-color: #aed581;
     }
     .home-button {
       margin-top: 40px;
@@ -85,7 +91,7 @@
         <div class="activity-card">
           <img src="images/flower-icon.png" alt="زهرة" class="activity-img">
           <h5 class="card-title">🎨 تلوين زهرة</h5>
-          <a href="games/coloring-flower-svg.html" class="activity-link">ابدأ</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/games/coloring-flower-svg.html" class="activity-link protected-link">ابدأ</a>
         </div>
       </div>
 
@@ -94,7 +100,7 @@
         <div class="activity-card">
           <img src="images/car-icon.png" alt="سيارة" class="activity-img">
           <h5 class="card-title">🚗 تلوين سيارة</h5>
-          <a href="games/coloring-car-svg.html" class="activity-link">ابدأ</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/games/coloring-car-svg.html" class="activity-link protected-link">ابدأ</a>
         </div>
       </div>
 
@@ -103,7 +109,7 @@
         <div class="activity-card">
           <img src="images/match-icon.png" alt="مطابقة" class="activity-img">
           <h5 class="card-title">🧠 لعبة المطابقة</h5>
-          <a href="games/matching-game.html" class="activity-link">ابدأ</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/games/matching-game.html" class="activity-link protected-link">ابدأ</a>
         </div>
       </div>
 
@@ -112,7 +118,7 @@
         <div class="activity-card">
           <img src="images/sentence-icon.png" alt="أكمل الجملة" class="activity-img">
           <h5 class="card-title">📝 أكمل الجملة</h5>
-          <a href="games/complete-sentence.html" class="activity-link">ابدأ</a>
+          <a href="https://espaceabkaraisaghir-backend.onrender.com/protected/games/complete-sentence.html" class="activity-link protected-link">ابدأ</a>
         </div>
       </div>
 
@@ -125,11 +131,11 @@
 
   <!-- ✅ كود الحماية -->
   <script>
-    document.querySelectorAll(".activity-link").forEach(link => {
+    document.querySelectorAll(".protected-link").forEach(link => {
       link.addEventListener("click", function(e) {
         if (localStorage.getItem("loggedIn") !== "true") {
           e.preventDefault();
-          alert("🔐 هذه اللعبة مخصصة للأعضاء فقط. يرجى تسجيل الدخول.");
+          alert("🔐 هذه اللعبة مخصصة للأعضاء فقط.\nيرجى تسجيل الدخول أولاً.");
           window.location.href = "/login.html";
         }
       });
